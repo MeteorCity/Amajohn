@@ -1,0 +1,152 @@
+.button-lang {
+  display: flex;
+  align-items: center;
+  margin-top: 7px;
+  font-family: Ubuntu;
+  font-size: 15px;
+  width: fit-content;
+}
+
+.circle-button {
+  background-color: transparent;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgb(129, 129, 129);
+  border-radius: 50%;
+  box-shadow: inset 0px 0.5px 0.5px rgb(185, 185, 185);
+  margin-right: 6px;
+}
+
+.hovered {
+  border: 3px solid rgb(3, 116, 114);
+}
+
+.clicked {
+  border: 5px solid rgb(3, 116, 114);
+}
+
+.language-page {
+  width: 100vw;
+  height: 673px;
+}
+
+.lang-settings {
+  padding-left: 150px;
+  padding-top: 30px;
+}
+
+.currency-settings {
+  padding-left: 150px;
+  padding-top: 30px;
+}
+
+.select-text {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  min-width: 600px;
+}
+
+.big-break-line {
+  width: 1130px;
+  border-bottom: 2px solid rgb(155, 155, 155);
+  margin-top: 25px;
+}
+
+.currency-button {
+  padding: 8px 10px 8px 15px;
+  width: 275px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(230, 230, 230);
+  border: 0.5px solid gray;
+  border-radius: 7px;
+  box-shadow: 1px 1px 3px rgb(174, 174, 174);
+  margin-bottom: 40px;
+  font-family: Ubuntu;
+  font-size: 13.5px;
+}
+
+.down-angle {
+  color: rgb(87, 87, 87);
+  transform: scale(1.2);
+}
+
+.currency-button:hover {
+  background-color: rgb(220, 220, 220);
+}
+
+.two-buttons {
+  padding-top: 30px;
+  padding-left: 150px;
+}
+
+.cancel-button {
+  padding: 7px 10px;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 6px;
+  margin-right: 12px;
+  box-shadow: 0.5px 0.5px 2px rgb(199, 199, 199);
+  font-weight: bold;
+}
+
+.cancel-button:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+.apply-changes-button {
+  padding: 8px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(249, 208, 5);
+  box-shadow: 0.5px 0.5px 2px rgb(199, 199, 199);
+  font-weight: bold;
+}
+
+.apply-changes-button:hover {
+  background-color: rgb(238, 196, 13);
+}
+
+.currency-popup {
+  position: absolute;
+  top: 135px;
+  left: 150px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid rgb(146, 146, 146);
+  border-radius: 10px;
+  width: 290px;
+  z-index: 99;
+  background-color: rgb(230, 230, 230);
+}
+
+.currencies {
+  font-family: Ubuntu;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.us-currency {
+  width: 289px;
+  padding-bottom: 10px;  
+  padding-top: 10px;  
+  border-bottom: 1px solid rgb(146, 146, 146);
+}
+
+.currencies:hover, .us-currency:hover {
+  background-color: rgb(215, 215, 215);
+}
+
+.chile-curr {
+  margin-top: 5px;
+}
+
+.select-curr-text {
+  color: gray;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 15px;
+}

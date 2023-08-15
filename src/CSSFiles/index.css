@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&family=Vollkorn:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+button {
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo-two {
+  width: 115px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.sign-in-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-in-box, .pass-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(198, 198, 198);
+  padding: 25px;
+  width: 350px;
+  height: 310px;
+  border-radius: 8px;
+  margin-top: 12px;
+}
+
+.sign-in-box *, .pass-box * {
+  width: 100%;
+}
+
+.sign-in-text {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.email-text {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.email-input, .password-input {
+  height: 28px;
+  display: block;
+  margin-bottom: 15px;
+  padding-left: 6px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  margin-top: 5px;
+}
+
+.email-input:focus {
+  background-color: rgb(247, 253, 255);
+}
+
+.continue-button {
+  border-radius: 6px;
+  background-color: #f3c427;
+  border: none;
+  height: 28px;
+  margin-bottom: 25px;
+  font-weight: bold;
+  box-shadow: 1px 1px 2px #d9ae21;
+}
+
+.continue-button:hover {
+  background-color: #e7ba24;
+}
+
+.continue-text {
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.forgot-pass {
+  font-size: 13px;
+}
+
+.sign-in-box a, .pass-box a {
+  text-decoration: none;
+}
+
+.sign-in-box a:hover, .pass-box a:hover {
+  text-decoration: underline;
+}
+
+.under-elems-container {
+  margin-top: 23px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.line-text-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.line {
+  height: 1px;
+  background-color: rgb(185, 185, 185);
+  width: 115px;
+}
+
+.new-to-amajohn {
+  font-size: 13px;
+  color: rgb(66, 66, 66);
+}
+
+.create-button {
+  width: 100%;
+  border: 1px solid rgb(175, 175, 175);
+  border-radius: 7px;
+  padding: 6px;
+  font-size: 14px;
+}
+
+.create-button:hover {
+  background-color: rgb(233, 233, 233);
+}
+
+.huge-break-line {
+  width: 100vw;
+  height: 2px;
+  margin-bottom: 15px;
+  background: linear-gradient(to right, rgb(238, 238, 238) 0%, rgb(194, 194, 194) 50%, rgb(238, 238, 238) 100%);
+}
+
+.beneath-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgb(232, 232, 232);
+}
+
+.beneath-links-container {
+  margin-bottom: 15px;
+  width: 350px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.beneath-links {
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.beneath-links:hover {
+  text-decoration: underline;
+}
+
+.copyright-text {
+  font-size: 11px;
+}
+
+.valid-text {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+.pass-box {
+  height: 290px;
+}
+
+.sign-in-text:last-of-type {
+  margin-bottom: 15px;
+}
+
+.pass-email-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.pass-email-text {
+  width: auto;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.change-link {
+  font-size: 13px;
+  margin-left: 5px;
+}
+
+.forgot-pass-2 {
+  font-size: 12.5px;
+  margin-left: 100px;
+}
+
+.password-input {
+  font-size: 16px;
+}
+
+.pass-checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.pass-checkbox {
+  width: auto;
+  margin-right: 6px;
+  margin-left: 2px;
+}
+
+.keep-text {
+  font-size: 12.5px;
+  font-weight: 500;
+  width: auto;
+}
+
+.beneath-container.email {
+  height: 244px;
+}
+
+.beneath-container.password {
+  height: 344px;
+}

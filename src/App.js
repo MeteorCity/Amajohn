@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import LangPref from "./pages/LangPref";
+import SignIn from "./pages/SignIn";
+import Orders from "./pages/Orders";
+import DeliverLoc from "./pages/DeliverLoc";
+import Cart from "./pages/Cart";
+import { useState } from "react";
+import Password from "./pages/Password";
 
 function App() {
+  const [cartCount, setCartCount] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={
+          <Home cartCount={cartCount} setCartCount={setCartCount}/>
+        }/>
+        <Route path="/language-preference" element={<LangPref />}/>
+        <Route path="/sign-in">
+          <Route index element={<SignIn />} />
+          <Route path=":email" element={<Password />} />
+        </Route>
+        <Route path="/orders" element={<Orders />}/>
+        <Route path="/location-choice" element={<DeliverLoc />}/>
+        <Route path="/cart" element={
+          <Cart cartCount={cartCount} setCartCount={setCartCount}/>
+        }/>
+      </Routes>
     </div>
   );
 }
