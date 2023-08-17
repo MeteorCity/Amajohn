@@ -1,6 +1,5 @@
 import Header from "../elements/Header";
 import LangSettings from "../elements/LangSettings";
-import "../CSSFiles/Lang.css";
 import { useState } from "react";
 
 const LangPref = () => {

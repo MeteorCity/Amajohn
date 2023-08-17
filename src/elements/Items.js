@@ -1,5 +1,4 @@
 import ItemRow from "./ItemsElems/ItemRow";
-import "../CSSFiles/Items.css";
 
 const Items = ({ cartCount, setCartCount }) => {
   return (

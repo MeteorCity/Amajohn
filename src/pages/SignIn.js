@@ -1,20 +1,41 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SignInBox from "../elements/SignInElems/SignInBox";
 import UnderElems from "../elements/SignInElems/UnderElems";
 import Beneath from "../elements/SignInElems/Beneath";
+import SignInCSS from "../CSSFiles/SignIn.module.css";
 
-const SignIn = () => {
-  const [inputValue, setInputValue] = useState("");
+const SignIn = ({ signInputValue, setSignInputValue }) => {
+  const API_URL = "http://localhost:3500/accounts";
+  const [accData, setAccData] = useState([]);
+
+  useEffect(() => {
+    const fetchAccs = async () => {
+      try {
+        const response = await fetch(API_URL);
+        if (!response.ok) throw Error;
+        const accounts = await response.json();
+        setAccData(accounts);
+      } catch {
+        console.log("Error fetching data");
+      }
+    }
+
+    fetchAccs();
+  }, [])
 
   return (
-    <div className="sign-in-page">
+    <div className={SignInCSS["sign-in-page"]}>
       <Link to="/" reloadDocument>
-        <img className="logo-two" src="/images/amajohn1.png" alt="logo"/>
+        <img className={SignInCSS["logo-two"]} src="/images/amajohn1.png" alt="logo"/>
       </Link>
-      <SignInBox inputValue={inputValue} setInputValue={setInputValue}/>
+      <SignInBox
+        signInputValue={signInputValue}
+        setSignInputValue={setSignInputValue}
+        accData={accData}
+      />
       <UnderElems />
-      <Beneath type="email"/>
+      <Beneath />
     </div>
   );
 }

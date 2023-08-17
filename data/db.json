@@ -1,0 +1,22 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "email": "john.talghader@gmail.com",
+      "password": "OompaLoompa",
+      "name": "Edward Ranger"
+    },
+    {
+      "id": 2,
+      "email": "billybob@gmail.com",
+      "password": "Carrot#1234?",
+      "name": "Billy Bob"
+    },
+    {
+      "id": 3,
+      "email": "greg@umn.edu",
+      "password": "password",
+      "name": "Stephen the Fifth"
+    }
+  ]
+}

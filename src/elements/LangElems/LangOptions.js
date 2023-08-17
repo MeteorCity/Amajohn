@@ -1,13 +1,14 @@
 import LangOption from "./LangOption";
 import { useState } from "react";
+import LangCSS from "../../CSSFiles/Lang.module.css";
 
 const LangOptions = () => {
   const [clickedButton, setClickedButton] = useState("English - EN");
 
   return (
-    <div className="lang-settings">
+    <div className={LangCSS["lang-settings"]}>
       <h2>Language Settings</h2>
-      <p className="select-text">
+      <p className={LangCSS["select-text"]}>
         Select the language you prefer for browsing, shopping, and communications.
       </p>
       <LangOption lang={"English - EN"}
@@ -46,7 +47,7 @@ const LangOptions = () => {
         clickedButton={clickedButton}
         setClickedButton={setClickedButton}
       />
-      <div className="big-break-line"></div>
+      <div className={LangCSS["big-break-line"]}></div>
     </div>
   );
 }

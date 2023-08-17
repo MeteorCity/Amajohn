@@ -1,17 +1,20 @@
 import Currency from "./LangElems/Currency";
 import LangOptions from "./LangElems/LangOptions";
 import TwoButtons from "./LangElems/TwoButtons";
+import LangCSS from "../CSSFiles/Lang.module.css";
+
 
 const LangSettings = ({ isPopup, setIsPopup }) => {
   const handleClick = (e) => {
-    if (e.target.closest(".currency-button")) return;
+    console.log(e.target);
+    if (e.target.closest(`.${LangCSS["currency-button"]}`)) return;
     else {
       setIsPopup(false);
     }
   }
 
   return (
-    <div className="language-page" onClick={handleClick}>
+    <div className={LangCSS["language-page"]} onClick={handleClick}>
       <LangOptions />
       <Currency isPopup={isPopup} setIsPopup={setIsPopup} />
       <TwoButtons />

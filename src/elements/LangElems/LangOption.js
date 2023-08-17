@@ -1,4 +1,5 @@
 import { useState } from "react";
+import LangCSS from "../../CSSFiles/Lang.module.css";
 
 const LangOption = ({ lang, clickedButton, setClickedButton }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -17,15 +18,15 @@ const LangOption = ({ lang, clickedButton, setClickedButton }) => {
   }
 
   return (
-    <div className="button-lang"
+    <div className={LangCSS["button-lang"]}
       onMouseEnter={handleEnter}
       onMouseLeave={handleLeave}
       onClick={handleClick}
       >
       <button
-        className={`circle-button
-          ${isHovered ? "hovered" : ""}
-          ${clickedButton === lang ? "clicked" : ""}
+        className={`${LangCSS["circle-button"]}
+          ${isHovered ? LangCSS["hovered"] : ""}
+          ${clickedButton === lang ? LangCSS["clicked"] : ""}
           `}
       ></button>
       <p>{lang}</p>

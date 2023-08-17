@@ -7,9 +7,11 @@ import DeliverLoc from "./pages/DeliverLoc";
 import Cart from "./pages/Cart";
 import { useState } from "react";
 import Password from "./pages/Password";
+import CreateAcc from "./pages/CreateAcc";
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
+  const [signInputValue, setSignInputValue] = useState(""); // sign-in input
 
   return (
     <div className="App">
@@ -19,8 +21,9 @@ function App() {
         }/>
         <Route path="/language-preference" element={<LangPref />}/>
         <Route path="/sign-in">
-          <Route index element={<SignIn />} />
+          <Route index element={<SignIn signInputValue={signInputValue} setSignInputValue={setSignInputValue}/>} />
           <Route path=":email" element={<Password />} />
+          <Route path="create-account" element={<CreateAcc />} />
         </Route>
         <Route path="/orders" element={<Orders />}/>
         <Route path="/location-choice" element={<DeliverLoc />}/>

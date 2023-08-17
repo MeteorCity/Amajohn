@@ -1,19 +1,20 @@
 import { FaAngleDown } from "react-icons/fa";
 import CurrPopup from "./CurrPopup";
 import { useState } from "react";
+import LangCSS from "../../CSSFiles/Lang.module.css";
 
 const Currency = ({ isPopup, setIsPopup }) => {
-  const [currencyChoice, setCurrencyChoice] = useState("$ - USD - US Dollar (Default)")
+  const [currencyChoice, setCurrencyChoice] = useState("$ - USD - US Dollar (Default)");
 
   return (
-    <div className="currency-settings">
+    <div className={LangCSS["currency-settings"]}>
       <h2>Currency Settings</h2>
-      <p className="select-text">Select the currency you want to shop with.</p>
-      <button className="currency-button" onClick={() => setIsPopup(true)}>
+      <p className={LangCSS["select-text"]}>Select the currency you want to shop with.</p>
+      <button className={LangCSS["currency-button"]} onClick={() => setIsPopup(true)}>
         <p>{currencyChoice}</p>
-        <FaAngleDown className="down-angle"/>
+        <FaAngleDown className={LangCSS["down-angle"]}/>
       </button>
-      <div className="big-break-line"></div>
+      <div className={LangCSS["big-break-line"]}></div>
       {isPopup && <CurrPopup setCurrencyChoice={setCurrencyChoice}/>}
     </div>
   );

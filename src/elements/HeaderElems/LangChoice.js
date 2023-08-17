@@ -1,5 +1,6 @@
 import { FaCaretDown } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import HeaderCSS from "../../CSSFiles/Header.module.css";
 
 const LangChoice = () => {
   let navigate = useNavigate();
@@ -9,8 +10,8 @@ const LangChoice = () => {
   }
 
   return (
-    <button className="lang-choice" onClick={routeChange}>
-      <img className="us-flag" src="/images/usa-flag.avif" alt="flag"/>
+    <button className={HeaderCSS["lang-choice"]} onClick={routeChange}>
+      <img className={HeaderCSS["us-flag"]} src="/images/usa-flag.avif" alt="flag"/>
       <p><strong>EN</strong></p>
       <FaCaretDown />
     </button>
