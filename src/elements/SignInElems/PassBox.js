@@ -1,22 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import SignInCSS from "../../CSSFiles/SignIn.module.css";
 
-const PassBox = ({ accData, email }) => {
+const PassBox = ({ account }) => {
   const navigate = useNavigate();
+  const email = account.email;
+  const password = account.password;
   const [isValidPass, setIsValidPass] = useState(true);
   const [passInput, setPassInput] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    for (const account of accData) {
-      if (account["email"] === email && account["password"] === passInput) {
-        navigate("/");
-      } else {
-        setIsValidPass(false);
-      }
+    if (passInput === password) {
+      navigate("/", {state: account});
+    } else {
+      setIsValidPass(false);
     }
   }
 

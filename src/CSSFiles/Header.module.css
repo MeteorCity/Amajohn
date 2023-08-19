@@ -148,3 +148,13 @@ header button:hover:not(.search-container button) {
   justify-content: space-between;
   padding: 0 7px;
 }
+
+.hello-text {
+  font-size: 11px;
+}
+
+.sign-in-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

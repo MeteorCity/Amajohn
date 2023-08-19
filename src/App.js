@@ -22,7 +22,7 @@ function App() {
         <Route path="/language-preference" element={<LangPref />}/>
         <Route path="/sign-in">
           <Route index element={<SignIn signInputValue={signInputValue} setSignInputValue={setSignInputValue}/>} />
-          <Route path=":email" element={<Password />} />
+          <Route path="password" element={<Password />} />
           <Route path="create-account" element={<CreateAcc />} />
         </Route>
         <Route path="/orders" element={<Orders />}/>

@@ -1,38 +1,31 @@
 // THIS PAGE IS JUST AN EXTENSION OF THE SIGNIN PAGE BUT I DON'T WANT TO FUCK
 // THINGS UP BY CHANGING THE FILE THAT IT'S IN
 
-import { Link, useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Beneath from "../elements/SignInElems/Beneath";
 import PassBox from "../elements/SignInElems/PassBox";
 import SignInCSS from "../CSSFiles/SignIn.module.css";
 
 const Password = () => {
-  const { email } = useParams();
-  const API_URL = "http://localhost:3500/accounts";
-  const [accData, setAccData] = useState([]);
+  const navigate = useNavigate();
+  const location = useLocation();
 
+  {/* if user manually enters url*/}
   useEffect(() => {
-    const fetchAccs = async () => {
-      try {
-        const response = await fetch(API_URL);
-        if (!response.ok) throw Error;
-        const accounts = await response.json();
-        setAccData(accounts);
-      } catch {
-        console.log("Error fetching data");
-      }
+    if (!location.state) {
+      navigate("/sign-in", {replace: true});
     }
+  }, [navigate, location.state]);
 
-    fetchAccs();
-  }, [])
+  const account = location.state;
 
   return (
     <div className={SignInCSS["sign-in-page"]}>
       <Link to="/" reloadDocument>
         <img className={SignInCSS["logo-two"]} src="/images/amajohn1.png" alt="logo"/>
       </Link>
-      <PassBox accData={accData} email={email}/>
+      {account && <PassBox account={account} />} {/* if user manually enters url*/}
       <Beneath />
     </div>
   );

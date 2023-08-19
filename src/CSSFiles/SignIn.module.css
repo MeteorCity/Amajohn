@@ -8,7 +8,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
   height: 100vh;
 }
 
@@ -140,7 +139,7 @@
   align-items: center;
   margin-top: 25px;
   background-color: rgb(232, 232, 232);
-  height: 344px;
+  flex: 1;
 }
 
 .beneath-links-container {
@@ -222,7 +221,7 @@
 }
 
 .create-box {
-  height: 700px;
+  height: 550px;
 }
 
 .create-text {
@@ -262,4 +261,12 @@
 
 .sign-in-link {
   margin-left: 5px;
+}
+
+.not-valid-text {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: -8px;
+  margin-bottom: 10px;
 }

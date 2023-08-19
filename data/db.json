@@ -17,6 +17,18 @@
       "email": "greg@umn.edu",
       "password": "password",
       "name": "Stephen the Fifth"
+    },
+    {
+      "id": 4,
+      "email": "vtalghader@yahoo.com",
+      "password": "test1234",
+      "name": "Vivien Talghader"
+    },
+    {
+      "id": 5,
+      "email": "hrothy@yahoo.com",
+      "password": "I'mafreak",
+      "name": "hrothgar hammerhead"
     }
   ]
 }

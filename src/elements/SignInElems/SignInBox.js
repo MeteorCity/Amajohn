@@ -10,7 +10,7 @@ const SignInBox = ({ signInputValue, setSignInputValue, accData }) => {
     e.preventDefault();
     for (const account of accData) {
       if (account["email"] === signInputValue) {
-        navigate(`${signInputValue}`);
+        navigate("password", {state: account});
       }
     }
     setIsValid(false);
@@ -24,13 +24,14 @@ const SignInBox = ({ signInputValue, setSignInputValue, accData }) => {
     <div className={SignInCSS["sign-in-box"]}>
       <h1 className={SignInCSS["sign-in-text"]}>Sign In</h1>
       <form autoComplete="off" onSubmit={handleSubmit}>
-        <label htmlFor="email-phone-input" className={SignInCSS["email-text"]}>Email or mobile phone number</label>
-        {!isValid && <p className={SignInCSS["valid-text"]}>Please enter a valid email.</p>}
+        <label htmlFor="email-input" className={SignInCSS["email-text"]}>Enter Email</label>
+        {!isValid && <p className={SignInCSS["valid-text"]}>Please enter a valid email</p>}
         <input
           onChange={handleChange}
           type="text"
+          id="email-input"
           className={SignInCSS["email-input"]}
-          name="email-phone-input"
+          name="email-input"
           value={signInputValue}
         />
         <button className={SignInCSS["continue-button"]}>Continue</button>
