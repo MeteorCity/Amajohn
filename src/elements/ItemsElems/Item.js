@@ -5,7 +5,7 @@ const Item = ({ cartCount, setCartCount }) => {
   const exchangeRate = {USD: 1, CLP: 0.0012, ARS: 0.0029, UYU: 0.027, BRL: 0.20,
     EUR: 1.08, GBP: 1.27, JPY: 0.0069, CNY: 0.14, KRW: 0.00076, THB: 0.029,
     NOK: 0.094, MAD: 0.098, MNT: 0.00029, PLN: 0.24
-  }
+  };
 
   const findCurrencyAbbrev = (currency) => {
     const letterPattern = /[A-Z]{3}/;
