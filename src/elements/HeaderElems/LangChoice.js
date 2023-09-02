@@ -4,15 +4,18 @@ import HeaderCSS from "../../CSSFiles/Header.module.css";
 
 const LangChoice = () => {
   let navigate = useNavigate();
-  const routeChange = () => {
-    const path = "/language-preference";
-    navigate(path);
+
+  const handleClick = () => {
+    navigate("/language-preference");
   }
 
   return (
-    <button className={HeaderCSS["lang-choice"]} onClick={routeChange}>
-      <img className={HeaderCSS["us-flag"]} src="/images/usa-flag.avif" alt="flag"/>
-      <p><strong>EN</strong></p>
+    <button className={HeaderCSS["lang-choice"]} onClick={handleClick}>
+      <img
+        className={HeaderCSS["country-flag"]}
+        src={`/images/${localStorage.getItem("language")}-flag.webp`}
+        alt="flag"/>
+      <p><strong>{localStorage.getItem("language")}</strong></p>
       <FaCaretDown />
     </button>
   );

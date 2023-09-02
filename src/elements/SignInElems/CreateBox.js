@@ -67,7 +67,8 @@ const CreateBox = ({ accData }) => {
         try {
           const result = await fetch(API_URL, postOptions);
           if (!result.ok) throw Error
-          navigate("/", {replace: true, state: newAccount});
+          localStorage.setItem("signedIn", `${name.split(" ")[0]}`);
+          navigate("/", {replace: true});
         } catch {
           console.log("Error creating new account");
         }

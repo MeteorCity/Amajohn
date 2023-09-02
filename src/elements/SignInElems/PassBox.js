@@ -13,7 +13,8 @@ const PassBox = ({ account }) => {
     e.preventDefault();
 
     if (passInput === password) {
-      navigate("/", {state: account});
+      localStorage.setItem("signedIn", `${account.name.split(" ")[0]}`);
+      navigate("/", {replace: true});
     } else {
       setIsValidPass(false);
     }

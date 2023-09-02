@@ -5,13 +5,20 @@ import SignIn from "./pages/SignIn";
 import Orders from "./pages/Orders";
 import DeliverLoc from "./pages/DeliverLoc";
 import Cart from "./pages/Cart";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Password from "./pages/Password";
 import CreateAcc from "./pages/CreateAcc";
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
   const [signInputValue, setSignInputValue] = useState(""); // sign-in input
+
+  useEffect(() => {
+    if (!localStorage.getItem("language")) {
+      localStorage.setItem("language", "EN");
+    }
+  }, []);
+
 
   return (
     <div className="App">

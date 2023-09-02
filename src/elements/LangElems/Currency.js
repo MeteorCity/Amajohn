@@ -1,11 +1,8 @@
 import { FaAngleDown } from "react-icons/fa";
 import CurrPopup from "./CurrPopup";
-import { useState } from "react";
 import LangCSS from "../../CSSFiles/Lang.module.css";
 
-const Currency = ({ isPopup, setIsPopup }) => {
-  const [currencyChoice, setCurrencyChoice] = useState("$ - USD - US Dollar (Default)");
-
+const Currency = ({ isPopup, setIsPopup, currencyChoice, setCurrencyChoice }) => {
   return (
     <div className={LangCSS["currency-settings"]}>
       <h2>Currency Settings</h2>

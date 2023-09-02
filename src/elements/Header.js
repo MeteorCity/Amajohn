@@ -5,20 +5,18 @@ import SearchForm from "./HeaderElems/SearchForm";
 import { Link, useNavigate } from "react-router-dom";
 import HeaderCSS from "../CSSFiles/Header.module.css";
 
-const Header = ({ setIsPopup, username, setUsername, isSignedIn, setIsSignedIn }) => {
+const Header = ({ setIsPopup }) => {
   let navigate = useNavigate();
   const routeChange = (path) => {
     navigate(path);
   }
 
   const handleSignInClick = () => {
-    if (!isSignedIn) {
+    if (!localStorage.getItem("signedIn")) {
       routeChange("/sign-in");
     } else {
+      localStorage.removeItem("signedIn");
       window.location.reload();
-      setUsername("");
-      setIsSignedIn(false);
-      navigate("/", {state: null})
     }
   }
 
@@ -32,8 +30,8 @@ const Header = ({ setIsPopup, username, setUsername, isSignedIn, setIsSignedIn }
       <LangChoice />
       <button className={`${HeaderCSS["two-right-button"]} ${HeaderCSS["sign-in-btn"]}`}
         onClick={handleSignInClick}>
-        {isSignedIn && <p className={HeaderCSS["hello-text"]}>{`Hello, ${username}`}</p>}
-        {isSignedIn ? "Sign Out" : "Sign In"}
+        {localStorage.getItem("signedIn") && <p className={HeaderCSS["hello-text"]}>{`Hello, ${localStorage.getItem("signedIn")}`}</p>}
+        {localStorage.getItem("signedIn") ? "Sign Out" : "Sign In"}
       </button>
       <button className={HeaderCSS["two-right-button"]} onClick={() => routeChange("/orders")}>
         Returns & Orders

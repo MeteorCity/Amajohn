@@ -1,10 +1,7 @@
 import LangOption from "./LangOption";
-import { useState } from "react";
 import LangCSS from "../../CSSFiles/Lang.module.css";
 
-const LangOptions = () => {
-  const [clickedButton, setClickedButton] = useState("English - EN");
-
+const LangOptions = ({ clickedButton, setClickedButton }) => {
   return (
     <div className={LangCSS["lang-settings"]}>
       <h2>Language Settings</h2>

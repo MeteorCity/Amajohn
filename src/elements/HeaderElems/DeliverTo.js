@@ -4,13 +4,9 @@ import HeaderCSS from "../../CSSFiles/Header.module.css";
 
 const DeliverTo = () => {
   let navigate = useNavigate();
-  const routeChange = () => {
-    const path = "/location-choice";
-    navigate(path);
-  }
 
   return (
-    <button className={HeaderCSS["deliver-to"]} onClick={routeChange}>
+    <button className={HeaderCSS["deliver-to"]} onClick={() => navigate("/location-choice")}>
       <FaMapMarkerAlt className={HeaderCSS["pin-icon"]}/>
       <p className={HeaderCSS["location-text"]}>Deliver to
         <span className={HeaderCSS["country"]}> Brazil</span>
