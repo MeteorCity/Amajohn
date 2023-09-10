@@ -1,5 +1,6 @@
 .item-container {
   width: 300px;
+  min-width: 280px;
   height: 520px;
   border: 0.5px solid gray;
   border-radius: 5px;
@@ -7,7 +8,8 @@
 }
 
 .item-img {
-  width: 100%;
+  width: 90%;
+  height: 90%;
 }
 
 .image-container {
@@ -15,7 +17,7 @@
   height: 50%;
   display: grid;
   place-items: center;
-
+  overflow: hidden;
 }
 
 .item-text-container {
@@ -25,14 +27,21 @@
 .item-description {
   margin-left: 10px;
   padding-top: 8px;
+  width: 95%;
 }
 
-.stars {
+.stars, .half-star, .empty-stars {
   color: darkorange;
 }
 
-.stars:last-of-type {
-  margin-right: 5px;
+.half-star {
+  margin-top: -3px;
+  margin-left: 0.5px;
+  width: 15px;
+}
+
+.empty-stars {
+  margin-left: 0.5px;
 }
 
 .reviews {
@@ -54,7 +63,7 @@
 }
 
 .item-buttons {
-  width: 80%;
+  width: 90%;
   display: block;
   margin: auto;
   margin-top: 13px;
@@ -79,7 +88,8 @@
 }
 
 .items-row {
-  margin-top: 50px;
+  margin-top: 40px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-around;
 }

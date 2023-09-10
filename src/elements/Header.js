@@ -5,7 +5,7 @@ import SearchForm from "./HeaderElems/SearchForm";
 import { Link, useNavigate } from "react-router-dom";
 import HeaderCSS from "../CSSFiles/Header.module.css";
 
-const Header = ({ setIsPopup }) => {
+const Header = ({ setIsPopup, setSearchValue }) => {
   let navigate = useNavigate();
   const routeChange = (path) => {
     navigate(path);
@@ -26,7 +26,7 @@ const Header = ({ setIsPopup }) => {
         <img className={HeaderCSS["logo"]} src="/images/amajohn2.png" alt="logo"/>
       </Link>
       <DeliverTo />
-      <SearchForm />
+      <SearchForm setSearchValue={setSearchValue} />
       <LangChoice />
       <button className={`${HeaderCSS["two-right-button"]} ${HeaderCSS["sign-in-btn"]}`}
         onClick={handleSignInClick}>

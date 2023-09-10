@@ -11,6 +11,7 @@ import CreateAcc from "./pages/CreateAcc";
 
 function App() {
   const [cartCount, setCartCount] = useState(0);
+  const [cartItems, setCartItems] = useState({});
   const [signInputValue, setSignInputValue] = useState(""); // sign-in input
 
   useEffect(() => {
@@ -24,7 +25,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={
-          <Home cartCount={cartCount} setCartCount={setCartCount}/>
+          <Home
+            cartCount={cartCount}
+            setCartCount={setCartCount}
+          />
         }/>
         <Route path="/language-preference" element={<LangPref />}/>
         <Route path="/sign-in">
