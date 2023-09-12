@@ -6,7 +6,6 @@ const TwoButtons = ({ clickedButton, currencyChoice }) => {
   const makeChanges = () => {
     localStorage.setItem("language", clickedButton.slice(-2));
     localStorage.setItem("currency", currencyChoice);
-    console.log(localStorage.getItem("currency"));
     navigate("/");
   }
 

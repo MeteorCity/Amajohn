@@ -20,25 +20,19 @@
     },
     {
       "id": 4,
-      "email": "vtalghader@yahoo.com",
+      "email": "tester@yahoo.com",
       "password": "test1234",
-      "name": "Vivien Talghader"
+      "name": "Test Testing"
     },
     {
       "id": 5,
       "email": "hrothy@yahoo.com",
-      "password": "I'mafreak",
+      "password": "bringer",
       "name": "hrothgar hammerhead"
     },
     {
       "id": 6,
-      "email": "@.y.yruruyrio",
-      "password": "daddyer",
-      "name": "yungdaggerdick"
-    },
-    {
-      "id": 7,
-      "email": "abishai.rajan@gmail.com",
+      "email": "abishai@gmail.com",
       "password": "applepie",
       "name": "Abi Shy"
     }

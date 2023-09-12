@@ -33,7 +33,7 @@ const Item = ({ cartCount, setCartCount, name, stars, reviews, price, delivery, 
     if (!localStorage.getItem("signedIn")) {
       navigate("/sign-in");
     } else {
-      localStorage.setItem("")
+      // localStorage.setItem("")
       setCartCount(cartCount + 1);
     }
   }

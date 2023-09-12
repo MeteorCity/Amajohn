@@ -2,12 +2,9 @@ import { FaSearch, FaCaretDown } from "react-icons/fa";
 import HeaderCSS from "../../CSSFiles/Header.module.css";
 
 const SearchForm = ({ setSearchValue }) => {
-  const handleChange = (e) => {
-    setSearchValue(e.target.value);
-  }
-  
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSearchValue(e.target.children[1].value);
   }
 
   return (
@@ -20,7 +17,6 @@ const SearchForm = ({ setSearchValue }) => {
         className={HeaderCSS["search-bar"]}
         type="text"
         placeholder="Search Amajohn"
-        onChange={handleChange}
       />
       <button className={HeaderCSS["search-icon-container"]}>
         <FaSearch className={HeaderCSS["search-icon"]}/>
