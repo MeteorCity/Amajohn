@@ -16,6 +16,8 @@ const Header = ({ setIsPopup, setSearchValue }) => {
       routeChange("/sign-in");
     } else {
       localStorage.removeItem("signedIn");
+      localStorage.removeItem("cartItems");
+      routeChange("/");
       window.location.reload();
     }
   }

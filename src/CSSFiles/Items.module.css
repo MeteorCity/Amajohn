@@ -1,6 +1,6 @@
 .item-container {
   width: 300px;
-  min-width: 280px;
+  min-width: 290px;
   height: 520px;
   border: 0.5px solid gray;
   border-radius: 5px;
@@ -89,7 +89,7 @@
 
 .items-row {
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-around;
 }
@@ -97,4 +97,37 @@
 .currency-abbrev {
   font-size: 15px;
   font-weight: normal;
+}
+
+.added-popup {
+  width: 300px;
+  height: 50px;
+  background-color: rgb(97, 238, 97);
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  transition: opacity 2s ease;
+  pointer-events: none;
+}
+
+.not-visible {
+  opacity: 0;
+}
+
+.is-visible {
+  opacity: 1;
+}
+
+.text-added-popup {
+  padding-left: 20px;
+  margin-bottom: 3px;
+}
+
+.check-mark {
+  margin-bottom: 3px;
+  margin-left: 90px;
+  transform: scale(1.6);
 }

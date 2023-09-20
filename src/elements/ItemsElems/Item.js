@@ -1,8 +1,9 @@
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import ItemsCSS from "../../CSSFiles/Items.module.css";
 
-const Item = ({ cartCount, setCartCount, name, stars, reviews, price, delivery, image }) => {
+const Item = ({ cartItems, setCartItems, isVisible, setIsVisible, name, stars, reviews, price, delivery, image }) => {
   const navigate = useNavigate();
   const starStr = stars.toString();
 
@@ -29,14 +30,28 @@ const Item = ({ cartCount, setCartCount, name, stars, reviews, price, delivery, 
     return (symbol ? symbol[0] : "");
   }
 
+  const exchangedPrice = price / exchangeRate[findCurrencyAbbrev(localStorage.getItem("currency"))];
+
   const handleAddClick = () => {
     if (!localStorage.getItem("signedIn")) {
       navigate("/sign-in");
     } else {
-      // localStorage.setItem("")
-      setCartCount(cartCount + 1);
+      const newItem = { name, price, delivery, image };
+      setIsVisible(true);
+      setCartItems([...cartItems, newItem]);
+      localStorage.setItem("cartItems", JSON.stringify([...cartItems, newItem]));
     }
   }
+
+  useEffect(() => {
+    if (isVisible) {
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+      }, 4000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible, setIsVisible])
 
   return (
     <div className={ItemsCSS["item-container"]}>
@@ -57,7 +72,7 @@ const Item = ({ cartCount, setCartCount, name, stars, reviews, price, delivery, 
         </div>
         <h2 className={ItemsCSS["price"]}>
           {findCurrencySymbol(localStorage.getItem("currency"))}
-          {(price / exchangeRate[findCurrencyAbbrev(localStorage.getItem("currency"))]).toFixed(2) + " "}
+          {exchangedPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " "}
           <span className={ItemsCSS["currency-abbrev"]}>{findCurrencyAbbrev(localStorage.getItem("currency"))}</span>
         </h2>
         <p className={ItemsCSS["delivery-date"]}>{"Delivery "}

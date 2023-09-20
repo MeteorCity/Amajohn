@@ -35,6 +35,24 @@
       "email": "abishai@gmail.com",
       "password": "applepie",
       "name": "Abi Shy"
+    },
+    {
+      "id": 7,
+      "email": "johnisfat@gmail.com",
+      "password": "111111",
+      "name": "Fat"
+    },
+    {
+      "id": 8,
+      "email": "sdf@.",
+      "password": "sdffds",
+      "name": "sdf"
+    },
+    {
+      "id": 9,
+      "email": "johnt22844@isd273.org",
+      "password": "gumdropsrock",
+      "name": "Leo Wang"
     }
   ]
 }

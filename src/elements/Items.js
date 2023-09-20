@@ -1,6 +1,11 @@
 import ItemRow from "./ItemsElems/ItemRow";
+import { FaCheckCircle } from "react-icons/fa";
+import ItemsCSS from "../CSSFiles/Items.module.css";
+import { useState } from "react";
 
-const Items = ({ cartCount, setCartCount, searchValue }) => {
+const Items = ({ searchValue, cartItems, setCartItems }) => {
+  const [isVisible, setIsVisible] = useState(false);
+
   const items = [
     {
       name: "Japanese Crayons (20ct), Kids Set, Back to School Supplies, Assorted Colors",
@@ -44,7 +49,7 @@ const Items = ({ cartCount, setCartCount, searchValue }) => {
     },
     {
       name: "Rope (36ft), Incredibly Durable, Made of Natural Straw Fibers, Includes Manual",
-      stars: 2,
+      stars: 4.5,
       reviews: "135,499",
       price: 6.22,
       delivery: "Thu, Sep 21",
@@ -52,7 +57,7 @@ const Items = ({ cartCount, setCartCount, searchValue }) => {
     },
     {
       name: "Fake Pumpkins, Comes as a Group of Four, Great for Halloween Decoration",
-      stars: 4.5,
+      stars: 2,
       reviews: "10,029",
       price: 42.98,
       delivery: "Tue, Oct 31",
@@ -64,7 +69,7 @@ const Items = ({ cartCount, setCartCount, searchValue }) => {
       reviews: "166",
       price: 150.99,
       delivery: "Sun, Oct 1",
-      image: "/images/chess-board.png"
+      image: "/images/chess-board-2.webp"
     }
   ]
 
@@ -84,12 +89,18 @@ const Items = ({ cartCount, setCartCount, searchValue }) => {
     <div>
       {fourFiltered.map((group, index) => (
         <ItemRow
-          cartCount={cartCount}
-          setCartCount={setCartCount}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
           group={group}
           key={index}
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
         />
       ))}
+      <div className={`${ItemsCSS["added-popup"]} ${ItemsCSS[isVisible ? "is-visible": "not-visible"]}`}>
+        <h4 className={ItemsCSS["text-added-popup"]}>Item Added to Cart!</h4>
+        <FaCheckCircle className={ItemsCSS["check-mark"]} />
+      </div>
     </div>
   );
 }

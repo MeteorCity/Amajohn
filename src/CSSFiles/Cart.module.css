@@ -1,0 +1,130 @@
+.shopping-cart-text {
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+.cart-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cart-items {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 1000px;
+  background-color: white;
+}
+
+.cart-item {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  height: 155px;
+}
+
+.cart-item-img {
+  width: 150px;
+  height: 150px;
+  margin-left: 15px;
+}
+
+.cart-item-text {
+  margin-left: 20px;
+}
+
+.cart-item-name {
+  margin-bottom: 10px;
+  width: 600px;
+}
+
+.cart-break-line {
+  width: 95%;
+  border: 0.5px solid rgb(206, 206, 206);
+  margin-top: 14px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.deliver-by-text {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.qty-text {
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+.angle-down {
+  margin-left: 8px;
+}
+
+.bottom-txts {
+  display: flex;
+  align-items: center;
+}
+
+.qty-change-btns {
+  display: grid;
+  place-content: center;
+  width: 15px;
+  height: 15px;
+  margin-top: 12px;
+  margin-left: 1px;
+}
+
+.qty-change-btns:first-of-type {
+  margin-left: 8px;
+}
+
+.delete-btn {
+  font-size: 13px;
+  color: #0066C0;
+  margin-left: 20px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  text-decoration: underline;
+}
+
+.total-overview {
+  background-color: white;
+  width: 350px;
+  height: 180px;
+  margin-top: 25px;
+}
+
+.subtotal {
+  font-size: 20px;
+  margin-top: 15px;
+  margin-left: 25px;
+}
+
+.tax {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.total {
+  font-size: 25px;
+  margin-top: 12px;
+  margin-left: 25px;
+}
+
+.buy-btn {
+  margin-top: 12px;
+  margin-left: 25px;
+  width: 300px;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(96deg, rgba(0,0,255,.8), rgba(0,0,255,0) 90.71%);
+}
+
+.buy-btn:hover {
+  transform: scale(1.01, 1.03);
+}
