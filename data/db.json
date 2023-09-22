@@ -43,10 +43,16 @@
       "name": "Fat"
     },
     {
-      "id": 9,
+      "id": 8,
       "email": "johnt22844@isd273.org",
       "password": "gumdropsrock",
       "name": "Leo Wang"
+    },
+    {
+      "id": 9,
+      "email": "masgantcher@gmail.com",
+      "password": "milesgantcher",
+      "name": "Miles Gantcher"
     }
   ]
 }

@@ -53,7 +53,7 @@ const Items = ({ searchValue, cartItems, setCartItems }) => {
       reviews: "135,499",
       price: 6.22,
       delivery: "Thu, Sep 21",
-      image: "/images/rope.webp"
+      image: "/images/rope.png"
     },
     {
       name: "Fake Pumpkins, Comes as a Group of Four, Great for Halloween Decoration",

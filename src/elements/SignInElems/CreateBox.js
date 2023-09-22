@@ -100,7 +100,7 @@ const CreateBox = ({ accData }) => {
 
         <button className={SignInCSS["create-acc-button"]}>Create Account</button>
       </form>
-      <p className={SignInCSS["continue-text"]}>{"By creating an account, you agree to Amazon's "}
+      <p className={SignInCSS["continue-text"]}>{"By creating an account, you agree to Amajohn's "}
         <a target="_blank" href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=508088">Conditions of Use</a> {"and "} 
         <a target="_blank" href="https://www.amazon.com/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=468496">Privacy Notice</a>
       </p>
