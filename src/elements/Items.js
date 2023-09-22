@@ -8,7 +8,7 @@ const Items = ({ searchValue, cartItems, setCartItems }) => {
 
   const items = [
     {
-      name: "Japanese Crayons (20ct), Kids Set, Back to School Supplies, Assorted Color",
+      name: "Japanese Crayons (20ct), Kids Set, Back to School Supplies, Assorted Colors",
       stars: 4,
       reviews: "1,589",
       price: 5.99,
